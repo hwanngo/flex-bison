@@ -1,7 +1,6 @@
 %{
-#define YYSTYPE double
-#include "sum.tab.h"
-#include <stdlib.h>
+  #include "sum.tab.h"
+  #include <stdio.h>
 %}
 
 whitespace [ \t]+
@@ -23,3 +22,4 @@ exponent [eE][+-]?{integer}
 "(" return LEFT_BRACKET;
 ")" return RIGHT_BRACKET;
 "\n" return END;
+"exit" exit(0);
